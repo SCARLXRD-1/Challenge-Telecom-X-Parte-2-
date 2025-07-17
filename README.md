@@ -1,68 +1,76 @@
-Análisis de Churn para TelecomX
-📌 Descripción del proyecto
-Este repositorio contiene el análisis completo de Churn (rotación de clientes) para una empresa de telecomunicaciones, desarrollado como parte del Challenge ONE de Data Science. El objetivo principal es identificar los factores que influyen en la tasa de abandono de clientes y proponer estrategias efectivas para reducirla.
+# 📊 Análisis de Churn para Telecom X
 
-🎯 Objetivo
-El objetivo principal es recopilar, procesar y analizar datos de clientes utilizando Python y sus bibliotecas principales para extraer información valiosa. Estos insights ayudarán al equipo de Data Science a desarrollar modelos predictivos y estrategias efectivas para reducir la tasa de churn.
+## 📌 Descripción del Proyecto  
+Este repositorio contiene un análisis completo de *churn* (rotación de clientes) realizado para una empresa ficticia de telecomunicaciones, **Telecom X**, como parte del programa **Challenge ONE – Data Science**.  
+El objetivo principal es identificar los factores que influyen en la cancelación del servicio por parte de los clientes y proponer estrategias basadas en datos para mejorar su retención.
 
-🔍 Contenido del notebook
-El análisis se estructura en las siguientes secciones:
+---
 
-Importación de bibliotecas: Carga de las bibliotecas esenciales para el procesamiento, análisis y visualización de datos (pandas, numpy, matplotlib, seaborn, scipy, requests, json).
+## 🎯 Objetivo  
+Aplicar técnicas de análisis de datos utilizando Python y sus principales bibliotecas para:
+- Procesar y explorar los datos de clientes.
+- Extraer *insights* valiosos sobre el comportamiento de abandono.
+- Apoyar al equipo de Data Science en la creación de modelos predictivos.
+- Diseñar estrategias efectivas para reducir la tasa de *churn*.
 
-Carga y exploración inicial del dataset: Carga del dataset desde una fuente externa (JSON) y normalización de su estructura para facilitar el análisis. Se realiza una exploración inicial para entender la composición de los datos.
+---
 
-Limpieza y preprocesamiento de datos: Pasos de limpieza, manejo de valores nulos y transformaciones necesarias (como mapeo de variables categóricas a numéricas) para preparar los datos.
+## 🔍 Contenido del Análisis
 
-Análisis de datos:
--Funciones para calcular la asociación entre variables categóricas (V de Cramér).
+1. **Importación de bibliotecas**  
+   Uso de herramientas clave como `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `requests`, `json` y `plotly` para procesamiento y visualización de datos.
 
--Visualización de distribuciones de variables categóricas vs. Churn.
+2. **Carga y exploración del dataset**  
+   Lectura del conjunto de datos desde un archivo JSON alojado en GitHub y análisis inicial de su estructura.
 
--Visualización de correlaciones (Pearson para numéricas, V de Cramér para categóricas).
+3. **Limpieza y preprocesamiento**  
+   - Tratamiento de valores nulos.  
+   - Normalización y transformación de variables categóricas.  
+   - Preparación del dataset para análisis estadístico.
 
--Análisis de la relación entre variables numéricas y Churn (boxplots/violin plots).
+4. **Análisis exploratorio de datos (EDA)**  
+   - Cálculo de asociaciones entre variables (V de Cramér, Pearson).  
+   - Visualizaciones de distribución y relación con el *churn*.  
+   - Análisis del *Customer Lifetime Value (CLV)*.
 
--Ingeniería de Características: Creación de nuevas variables informativas (NumServices, TenureGroup, PremiumCustomer).
+5. **Ingeniería de características**  
+   - Creación de nuevas variables: `NumServices`, `TenureGroup`, `PremiumCustomer`.
 
--Análisis de la tasa de Churn por diferentes combinaciones de factores (heatmap interactivo).
+6. **Análisis combinado de factores**  
+   - Evaluación del *churn* según múltiples combinaciones de variables (heatmaps interactivos).
 
--Análisis de la relación entre el Valor de Vida del Cliente (CLV) y el Churn.
+7. **Insights clave**  
+   - Identificación de factores que elevan o reducen la tasa de cancelación.
 
--Insights clave: Resumen de los principales hallazgos del análisis, destacando los factores que aumentan y protegen contra el Churn, así como patrones relevantes en variables numéricas y correlaciones.
+8. **Conclusiones y recomendaciones**  
+   - Interpretación de resultados.  
+   - Propuestas estratégicas para reducir el *churn* basadas en los hallazgos.
 
--Conclusiones y recomendaciones: Interpretación general de los resultados y un conjunto de recomendaciones estratégicas basadas en los insights para reducir el abandono de clientes.
+---
 
-🛠️ Herramientas y bibliotecas
-Python
+## 🛠️ Herramientas y Bibliotecas Utilizadas
 
--pandas
+- `pandas`  
+- `numpy`  
+- `matplotlib`  
+- `seaborn`  
+- `scipy`  
+- `requests`  
+- `json`  
+- `plotly`
 
--numpy
+---
 
--matplotlib
+## 💡 Principales Hallazgos
 
--seaborn
+- Los clientes con contratos **mensuales** presentan una tasa de *churn* del **42%**, significativamente mayor que aquellos con contratos **anuales (11%)** o **bianuales (3%)**.
+- La **ausencia de servicios** como `OnlineSecurity` y `TechSupport` aumenta el riesgo de cancelación en más de un **35%**.
+- Los **primeros 12 meses** de relación con el cliente son críticos, especialmente en usuarios mayores de **65 años**.
 
--requests
+---
 
--json
+## 🚀 Cómo Ejecutar el Proyecto
 
--plotly (para visualizaciones interactivas)
-
-💡 Principales hallazgos
-Los clientes con contratos mensuales tienen tasas de churn significativamente más altas (42%) comparados con contratos anuales (11%) o bianuales (3%).
-
-La falta de servicios como OnlineSecurity y TechSupport aumenta el riesgo de abandono en un 35%.
-
-Los primeros 12 meses son críticos para la retención, especialmente en clientes mayores de 65 años.
-
-🚀 Cómo ejecutar el código
-Clona este repositorio.
-
-Asegúrate de tener instaladas las bibliotecas mencionadas.
-
-Ejecuta las celdas secuencialmente para replicar el análisis.
-
-📂 Dataset
-El dataset utilizado para este análisis se carga directamente desde una URL de GitHub en formato JSON. Contiene información sobre clientes de Telecom X, incluyendo datos demográficos, servicios contratados, información de cuenta y si el cliente ha abandonado el servicio (Churn).
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/nombre_repositorio.git
